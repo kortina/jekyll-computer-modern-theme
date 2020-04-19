@@ -3,9 +3,6 @@ layout: default
 title: 'Jekyll Computer Modern Theme'
 ---
 
-*config: {{jekyll.environment}} {{site.url}}*
-
-
 # h1 example
 
 Jekyll Computer Modern Theme is a simple theme for publishing essays to GitHub Pages with Jekyll: [Github Link](https://github.com/kortina/jekyll-computer-modern-theme). It is 🆗 for a simple blog or academic paper. 
