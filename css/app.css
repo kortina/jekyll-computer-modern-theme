@@ -1,0 +1,175 @@
+body {
+  font-family: 'Computer Modern Serif', 'Georgia', monospace;
+  text-align: center;
+  font-size: 130%;
+  line-height: 1.35;
+  color: #111;
+}
+
+header,
+section,
+footer,
+article > * {
+  text-align: left;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: xx-large;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: x-large;
+  font-weight: bold;
+}
+
+h3,
+h4,
+h5,
+h6 {
+  font-weight: bold;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol,
+/* iframe, */
+/* pre, */
+/* section figure, */
+/* article aside, */
+/* article blockquote, */
+article > * {
+  margin-bottom: 1rem;
+}
+
+blockquote {
+  /* padding-left: 8px; */
+  border-left: 2px solid #ddd;
+}
+
+article > blockquote {
+  /* we need to match these to the blockquote above so text aligns properly */
+  /* padding-right: 8px; */
+  border-right: 2px solid #fff;
+}
+
+pre {
+  background: #fbfbfb;
+  padding: 1rem;
+}
+
+aside,
+blockquote,
+pre,
+pre.highlight {
+  background-color: rgba(248, 248, 248, 0.4);
+  border: 0;
+  border-radius: 0;
+  border-left: 4px solid #f5f5f5;
+  padding: 20px;
+}
+
+pre,
+pre.highlight {
+  word-break: normal;
+  word-wrap: normal;
+  white-space: pre;
+  overflow-x: scroll;
+}
+
+pre.highlight span {
+  font-size: 80%;
+}
+
+code,
+kbd,
+pre,
+samp {
+  font-family: 'Computer Modern Typewriter', Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+pre code {
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+}
+
+p code,
+li code {
+  white-space: normal;
+  padding: 2px 4px;
+  font-size: 80%;
+  color: #c7254e;
+  background-color: #f9f2f4;
+  border-radius: 4px;
+  overflow-x: scroll;
+}
+
+article > aside {
+  /* subtract the padding */
+  max-width: 660px;
+}
+
+/****************** text treatments *****************/
+
+b,
+strong {
+  font-weight: bold;
+}
+
+i,
+em {
+  font-style: italic;
+}
+
+ul {
+  list-style-type: disc;
+}
+
+article img {
+  max-width: 100%;
+}
+article img.full-width {
+  position: relative;
+  width: 100vw;
+  max-width: 100vw;
+  margin: 0;
+  margin-left: calc(-50vw + 50%);
+}
+
+figcaption {
+  font-style: italic;
+  font-size: small;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #ddd;
+}
+
+a,
+a:visited,
+a:active {
+  color: #0067fb;
+  text-decoration: none;
+}
+
+/****************** exceptions *****************/
+/* stylelint-disable */
+aside p:last-child,
+aside ul:last-child,
+aside ol:last-child,
+blockquote p:last-child,
+blockquote ul:last-child,
+blockquote ol:last-child {
+  /* stylelint-enable */
+  margin-bottom: 0;
+}

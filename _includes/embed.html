@@ -1,0 +1,52 @@
+{% if include.url contains 'youtube.com' %}
+{% if false %}
+h = .5631 * w
+{% endif %}
+<iframe
+  class="video-embed"
+  width="{{include.width | default:"700"}}"
+  height="{{include.height | default:"394"}}"
+  src="{{include.url}}?rel=0&amp;showinfo=0&rel=0&autoplay={{include.autoplay | default:"0"}}"
+  frameborder="0"
+  allow="autoplay; fullscreen"
+  allowfullscreen
+  ></iframe>
+{% elsif include.url contains 'vimeo.com' %}
+<iframe
+  class="video-embed"
+  src="{{include.url}}?autoplay={{include.autoplay | default:"1"}}&color=32CD32&title=0&byline=0&portrait=0"
+  width="{{include.width | default:"700"}}"
+  height="{{include.height | default:"394"}}"
+  frameborder="0"
+  webkitallowfullscreen
+  allow="autoplay; fullscreen"
+  mozallowfullscreen
+  allowfullscreen
+  ></iframe>
+{% elsif include.url contains 'dailymotion.com' %}
+<iframe
+  class="video-embed"
+  frameborder="0"
+  width="{{include.width | default:"700"}}"
+  height="{{include.height | default:"394"}}"
+  src="{{include.url}}?autoplay={{include.autoplay | default:"0"}}"
+  allow="autoplay; fullscreen"
+  allowfullscreen
+></iframe>
+{% elsif include.url contains 'soundcloud.com' %}
+<iframe
+  width="{{include.width | default:"700"}}"
+  height="300"
+  scrolling="no"
+  frameborder="no"
+  allow="autoplay; fullscreen"
+  src="{{include.url}}"
+  ></iframe>
+{% else %}
+<figure><img 
+  {% if include.style %}style="{{include.style}}"{% endif %}
+  {% if include.class %}class="{{include.class}}"{% endif %}
+  src="{{include.url}}" 
+/><figcaption>{{include.caption}}</figcaption>
+</figure>
+{% endif %}

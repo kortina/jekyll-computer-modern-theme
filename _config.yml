@@ -1,0 +1,20 @@
+# Site settings
+title: Oakland Film Club
+tagline: "..."
+url: "http://oaklandfilmclub.com" # The base hostname & protocol for your site. Use it if you need absolute URL's
+permalink: /posts/:title/
+
+# Social
+socialimg: /img/social.jpg # be sure to change this image
+facebook: _
+twitter: _
+github: _
+googleplus: _
+instagram: _
+
+# Contact
+phone: "..." # This is my real number. You should text me.
+email: "..." # This is my real email address. Please don't email me.
+
+exclude: [.scss, README.md, node_modules, gruntfile.js, package.json]
+future: true
