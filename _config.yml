@@ -1,20 +1,9 @@
 # Site settings
-title: Oakland Film Club
-tagline: "..."
-url: "http://oaklandfilmclub.com" # The base hostname & protocol for your site. Use it if you need absolute URL's
+title: Jekyll Computer Modern Theme
+tagline: '...'
+url: 'https://kortina.nyc/jekyll-computer-modern-theme' # The base hostname & protocol for your site. Use it if you need absolute URL's. This should NOT end in a `/` character
 permalink: /posts/:title/
-
-# Social
-socialimg: /img/social.jpg # be sure to change this image
-facebook: _
-twitter: _
-github: _
-googleplus: _
-instagram: _
-
-# Contact
-phone: "..." # This is my real number. You should text me.
-email: "..." # This is my real email address. Please don't email me.
+socialimg: ''
 
 exclude: [.scss, README.md, node_modules, gruntfile.js, package.json]
 future: true
