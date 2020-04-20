@@ -181,6 +181,15 @@ a:active {
   text-decoration: none;
 }
 
+a:hover {
+  text-decoration: underline;
+}
+
+.light-grey,
+a.light-grey {
+  color: #ccc;
+}
+
 /****************** exceptions *****************/
 /* stylelint-disable */
 aside p:last-child,
