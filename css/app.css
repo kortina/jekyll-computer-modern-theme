@@ -13,23 +13,41 @@ article > * {
   text-align: left;
   max-width: 700px;
   margin: 0 auto;
+  display: block;
 }
 
-h1 {
-  font-size: xx-large;
-  font-weight: bold;
+header,
+footer,
+article > time {
+  font-size: smaller;
+  color: #444;
 }
 
-h2 {
-  font-size: x-large;
-  font-weight: bold;
-}
-
+h1,
+h2,
 h3,
 h4,
 h5,
 h6 {
   font-weight: bold;
+}
+h1 {
+  font-size: 2.6rem;
+}
+h2 {
+  font-size: 2.4rem;
+}
+h3 {
+  font-size: 2.2rem;
+}
+h4 {
+  font-size: 2rem;
+}
+h5 {
+  font-size: 1.8rem;
+}
+h6 {
+  font-size: 1.5rem;
 }
 
 p,
@@ -116,6 +134,7 @@ li code {
 article > aside {
   /* subtract the padding */
   max-width: 660px;
+  font-size: smaller;
 }
 
 /****************** text treatments *****************/

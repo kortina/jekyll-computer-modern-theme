@@ -4,14 +4,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <!-- Plain Description -->
-  <title>{{page.title}} -- {{ site.title }}</title>
+  <title>
+    {{page.title | strip_newlines | strip_html | escape}} -- {{ site.title | strip_newlines |
+    strip_html | escape }}
+  </title>
   <meta name="description" content="{{site.tagline}}" />
   <link rel="icon" type="image/png" href="/favicon.png" />
 
   <!-- Google+ -->
   <link rel="publisher" href="https://plus.google.com/{{site.googleplus}}" />
-  <meta itemprop="name" content="{{page.title}}" />
-  <meta itemprop="description" content="{site.tagline}}" />
+  <meta itemprop="name" content="{{page.title | strip_newlines | strip_html | escape}}" />
+  <meta itemprop="description" content="{site.tagline | strip_newlines | strip_html | escape}}" />
   <meta
     itemprop="image"
     content="{% if page.image %}{{site.url}}{{page.image}}{% else %}{{site.url}}{{site.socialimg}}{% endif %}"
@@ -21,23 +24,32 @@
   <meta property="og:type" content="website" />
   <meta
     property="og:title"
-    content="{% if page.fulltitle %}{{page.fulltitle}}{% else %}{{page.title}} | {{ site.title }} {% endif %}"
+    content="{% if page.fulltitle %}{{page.fulltitle | strip_newlines | strip_html | escape}}{% else %}{{page.title | strip_newlines | strip_html | escape}} | {{ site.title | strip_newlines | strip_html | escape }} {% endif %}"
   />
-  <meta property="og:description" content="{{site.tagline}}" />
+  <meta
+    property="og:description"
+    content="{{site.tagline | strip_newlines | strip_html | escape}}"
+  />
   <meta
     property="og:image"
     content="{% if page.image %}{{site.url}}{{page.image}}{% else %}{{site.url}}{{site.socialimg}}{% endif %}"
   />
   <meta property="og:url" content="{{site.url}}{{page.url}}" />
-  <meta property="og:site_name" content="{{ site.title }} " />
+  <meta
+    property="og:site_name"
+    content="{{ site.title | strip_newlines | strip_html | escape }} "
+  />
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary" />
   <meta
     name="twitter:title"
-    content="{% if page.fulltitle %}{{page.fulltitle}}{% else %}{{page.title}} | {{ site.title }} {% endif %}"
+    content="{% if page.fulltitle %}{{page.fulltitle | strip_newlines | strip_html | escape}}{% else %}{{page.title | strip_newlines | strip_html | escape}} | {{ site.title | strip_newlines | strip_html | escape }} {% endif %}"
   />
-  <meta name="twitter:description" content="{{site.tagline}}" />
+  <meta
+    name="twitter:description"
+    content="{{site.tagline | strip_newlines | strip_html | escape}}"
+  />
   <meta name="twitter:image" content="{{site.url}}{{site.socialimg}}" />
   <meta name="twitter:url" content="{{site.url}}{{page.url}}" />
 
