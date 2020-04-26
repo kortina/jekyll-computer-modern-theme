@@ -3,6 +3,7 @@ title: Jekyll Computer Modern Theme
 tagline: '...'
 url: 'https://kortina.nyc/jekyll-computer-modern-theme' # The base hostname & protocol for your site. Use it if you need absolute URL's. This should NOT end in a `/` character
 permalink: /posts/:title/
+author: author
 socialimg: ''
 
 exclude: [.scss, README.md, node_modules, gruntfile.js, package.json]
