@@ -11,6 +11,10 @@ Jekyll Computer Modern Theme is a simple theme for publishing essays to GitHub P
 
 {% for post in site.posts %}<p><a href="{{ post.url }}">{{ post.title }}</a></p>{% endfor %}
 
+## Example Static Page (not a post)
+
+[Example Static Page]({{site.url}}/example-static-page/)
+
 ## Style Guide
 
 Here is a short paragraph of text.
