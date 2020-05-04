@@ -7,7 +7,7 @@ if [ -z "$1" ]; then
 fi
 
 title="$1"
-t="`echo "$title" | iconv -t ascii//TRANSLIT | sed -E 's/[~\^]+//g' | sed -E 's/[^a-zA-Z0-9]+/-/g' | sed -E 's/^-+\|-+$//g' | tr A-Z a-z | sed 's/[- \r]*$//g'`"
+t="`echo "$title" | iconv -t ascii//TRANSLIT | sed -E 's/[~\^]+//g' | sed -E 's/[^a-zA-Z0-9]+/-/g' | tr '\n' '-' | sed -E 's/^-+\|-+$//g' | tr A-Z a-z | sed 's/[-]*$//g'`"
 d="`date +'%Y-%m-%d'`"
 f="_posts/$d-$t.md"
 
