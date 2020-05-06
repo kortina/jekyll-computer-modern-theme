@@ -30,10 +30,6 @@
     property="og:description"
     content="{{site.tagline | strip_newlines | strip_html | escape}}"
   />
-  <meta
-    property="og:image"
-    content="{% if page.image %}{{site.url}}{{page.image}}{% else %}{{site.url}}{{site.socialimg}}{% endif %}"
-  />
   <meta property="og:url" content="{{site.url}}{{page.url}}" />
   <meta
     property="og:site_name"
@@ -50,8 +46,10 @@
     name="twitter:description"
     content="{{site.tagline | strip_newlines | strip_html | escape}}"
   />
-  <meta name="twitter:image" content="{{site.url}}{{site.socialimg}}" />
   <meta name="twitter:url" content="{{site.url}}{{page.url}}" />
+
+  <!-- use page.hero_image OR fallback to first img in post -->
+  {% include meta_hero_image.html %}
 
   <!-- CSS & fonts -->
   <link

@@ -1,0 +1,49 @@
+{% 
+if page.hero_image 
+  %}
+  <meta property="og:image" content="{{ page.hero_image | strip }}" />
+  <meta name="twitter:image" content="{{ page.hero_image | strip }}" />{% 
+else 
+  %}{% 
+  assign foundImage = 0 
+  %}{% 
+  assign images = content | split:"<img " 
+  %}{%   
+  for image in images 
+    %}{%   
+    if image contains 'src' 
+      %}{%     
+      if foundImage == 0 
+        %}{% 
+        assign html = image | split:"/>" | first 
+        %}{% 
+        assign tags = html | split:" " 
+        %}{% 
+        for tag in tags 
+          %}{% 
+          if tag contains 'src' 
+            %}{% 
+            assign hero_image = tag | replace:'src="', '' | replace: '"', '' 
+            %}{% 
+            unless hero_image contains 'http' 
+              %}{% 
+              assign hero_image = hero_image | prepend: site.url 
+              %}{% 
+            endunless 
+            %}
+            <meta property="og:image" content="{{ hero_image | strip }}" />
+            <meta name="twitter:image" content="{{ hero_image | strip }}" />{% 
+            assign foundImage = 1 
+            %}{% 
+          endif 
+          %}{% 
+        endfor 
+        %}{% 
+      endif 
+      %}{% 
+    endif 
+    %}{% 
+  endfor 
+  %}{% 
+endif 
+%}
