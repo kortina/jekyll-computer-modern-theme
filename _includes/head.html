@@ -14,7 +14,7 @@
   <!-- Google+ -->
   <link rel="publisher" href="https://plus.google.com/{{site.googleplus}}" />
   <meta itemprop="name" content="{{page.title | strip_newlines | strip_html | escape}}" />
-  <meta itemprop="description" content="{site.tagline | strip_newlines | strip_html | escape}}" />
+  <meta itemprop="description" content="{{site.tagline | strip_newlines | strip_html | escape}}" />
   <meta
     itemprop="image"
     content="{% if page.image %}{{site.url}}{{page.image}}{% else %}{{site.url}}{{site.socialimg}}{% endif %}"
